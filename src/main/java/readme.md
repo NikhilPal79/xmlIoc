@@ -17,7 +17,8 @@ and starter dependencies — so you focus on code, not setup!
 
 
 # IOC [INVERSION OF CONTROL]
-1. XML [show us the exception@ run time ][bcz this file pass at the run time ][OUTSIDE THE JAVA CLASS ]
+1. XML [show us the exception@ run time ][bcz this file pass at the run time ][OUTSIDE THE JAVA CLASS]
+[pass init-method= , destroy method = , scope = ]
 
 2. @CONFIG ANNOTATION 
 [alse mention @bean annotation]
@@ -45,8 +46,23 @@ Default is Eager
 
 # APPLICATION KILLED 
 
-# SPRING BOOT APPLICATION ANNOTATION consist of 3 things 
-1. ComponentScan
-2. EnableComponentScan
-3. 
+# SPRING BOOT APPLICATION ANNOTATION consist of 3 annotation combined 
+1. Component [scans for Component, Service, Repository][finds bean automatically(scanning)]
+[Use when YOU own the class.Class has @Component etc.Your own services / repos Standard Spring MVC layers Most common approach]
+
+2. EnableAutoConfiguration [triggers auto-config][creates bean manually(defining)]
+
+3. Configuration [ marks as config class ]
+[Use when You DON'T own the class Third-party libraries Custom init logic needed DataSource, RestTemplate etc.Infrastructure / config beans]
+
+# SCOPE [SIGNLETON][PROTOTYPE][SESSION][REQUEST]
+
+# DEPENDENCY INJECTION 
+
+CONSTRUCTOR BASED > SETTER BASED [AUTOWIRE]
+
+QUESTION => HOW TO CHECK HOW MANY PEOPLE LOGGED IN YOUR SYSTEM ? # SESSIONS 
+
+
+
 

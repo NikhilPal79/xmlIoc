@@ -1,15 +1,12 @@
 package CodeWithNikhil.LearnSpring;
 
-import CodeWithNikhil.LearnSpring.Config.AppConfig;
+import CodeWithNikhil.LearnSpring.Component.MovieBO;
+import CodeWithNikhil.LearnSpring.Configuration.AppConfig;
 import CodeWithNikhil.LearnSpring.XmlBasedIoc.Movie;
-import CodeWithNikhil.LearnSpring.XmlBasedIoc.cast;
-import CodeWithNikhil.LearnSpring.XmlBasedIoc.salary;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 @SpringBootApplication
 public class LearnSpringApplication {
@@ -64,9 +61,17 @@ public class LearnSpringApplication {
 		Movie contextBean = context.getBean("movie", Movie.class);
 		System.out.println(contextBean);
 
-		((AnnotationConfigApplicationContext)context).close();
+		/*((AnnotationConfigApplicationContext)context).close();*/
 
 
+		MovieBO movieBO1 = context.getBean(MovieBO.class);
+		MovieBO movieBO2 = context.getBean(MovieBO.class);
+		MovieBO movieBO3 = context.getBean(MovieBO.class);
+		MovieBO movieBO4 = context.getBean(MovieBO.class);
+		System.out.println(movieBO1);
+		System.out.println(movieBO2);
+		System.out.println(movieBO3);
+		System.out.println(movieBO4);
 
 
 	}
