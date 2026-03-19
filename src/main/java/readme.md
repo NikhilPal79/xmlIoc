@@ -10,10 +10,21 @@ and starter dependencies — so you focus on code, not setup!
 # BEAN []
 
 # LIFE CYCLE OF BEAN []
+1. INIT ==>[this gets printed when Application context initialized ]
+2. POST INIT
+3. PRE DESTROY 
+4. DESTROY 
+
 
 # IOC [INVERSION OF CONTROL]
-1. XML [show us the exception@ run time ][bcz this file pass at the run time ]
+1. XML [show us the exception@ run time ][bcz this file pass at the run time ][OUTSIDE THE JAVA CLASS ]
+
 2. @CONFIG ANNOTATION 
+[alse mention @bean annotation]
+[BEAN WILL BE IN TERMS OF METHOD ]
+[mehtod name will be bean name]
+[not best practice bcz of lots of config packages][either you can provide specific class, base package]
+
 3. @COMPONENT 
 
 # APPLICATION CONTEXT [MAKES THE BEAN]
@@ -30,7 +41,12 @@ Use @Lazy selectively for heavy or rarely used services!
 Eager loading creates ALL beans at startup — slow start but fast requests, errors caught early, high memory.
 Default is Eager
 
-# HOMEWORK
-1. XML BASED IOC IN LIST AND MAP 
+# APPLICATION CLOSED 
 
+# APPLICATION KILLED 
+
+# SPRING BOOT APPLICATION ANNOTATION consist of 3 things 
+1. ComponentScan
+2. EnableComponentScan
+3. 
 

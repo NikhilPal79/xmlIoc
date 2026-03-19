@@ -1,14 +1,14 @@
 package CodeWithNikhil.LearnSpring;
 
-import CodeWithNikhil.LearnSpring.LooseCoupling.Bmw;
-import CodeWithNikhil.LearnSpring.LooseCoupling.DieselEngine;
-import CodeWithNikhil.LearnSpring.LooseCoupling.Honda;
-import CodeWithNikhil.LearnSpring.xmlBasedIoc.Movie;
-import CodeWithNikhil.LearnSpring.xmlBasedIoc.cast;
-import CodeWithNikhil.LearnSpring.xmlBasedIoc.salary;
+import CodeWithNikhil.LearnSpring.Config.AppConfig;
+import CodeWithNikhil.LearnSpring.XmlBasedIoc.Movie;
+import CodeWithNikhil.LearnSpring.XmlBasedIoc.cast;
+import CodeWithNikhil.LearnSpring.XmlBasedIoc.salary;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 @SpringBootApplication
@@ -28,14 +28,19 @@ public class LearnSpringApplication {
 		/*Movie movie = new Movie(1, "harry potter-1", 2001,"friction",);*/
 
 
+		///XML BASED IOC
+
+
+		/*ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+
 		///  get movie bean
 
-		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 		Movie movie = context.getBean("movie", Movie.class);
 		System.out.println(movie);
 
 
 		///  get cast bean
+
 		cast c1 = context.getBean("cast1", cast.class);
 		cast c2 = context.getBean("cast2", cast.class);
 		cast c3 = context.getBean("cast3", cast.class);
@@ -52,7 +57,16 @@ public class LearnSpringApplication {
 		System.out.println(salary2);
 		System.out.println(salary3);
 
-		((ClassPathXmlApplicationContext)context).close();
+
+		((ClassPathXmlApplicationContext)context).close();*/
+
+		ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+		Movie contextBean = context.getBean("movie", Movie.class);
+		System.out.println(contextBean);
+
+		((AnnotationConfigApplicationContext)context).close();
+
+
 
 
 	}

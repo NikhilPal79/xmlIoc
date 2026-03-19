@@ -1,4 +1,4 @@
-package CodeWithNikhil.LearnSpring.xmlBasedIoc;
+package CodeWithNikhil.LearnSpring.XmlBasedIoc;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -10,7 +10,7 @@
     <!--movie bean-->
 
 
-    <bean id="movie" class="CodeWithNikhil.LearnSpring.xmlBasedIoc.Movie">
+    <!--<bean id="movie" class="CodeWithNikhil.LearnSpring.XmlBasedIoc.Movie" init-method="start" destroy-method="destroy">
         <constructor-arg name="id" value="1"></constructor-arg>
         <constructor-arg name="movieName" value="harry potter-1"></constructor-arg>
         <constructor-arg name="releaseYear" value="2001"></constructor-arg>
@@ -30,22 +30,22 @@
                 <entry key="harm" value="50000"></entry>
             </map>
         </constructor-arg>
-    </bean>
+    </bean>-->
 
     <!--cast bean-->
 
-    <bean id="cast1" class="CodeWithNikhil.LearnSpring.xmlBasedIoc.cast">
+    <bean id="cast1" class="CodeWithNikhil.LearnSpring.XmlBasedIoc.cast">
         <constructor-arg name="id" value="1"></constructor-arg>
         <constructor-arg name="name" value="potter"></constructor-arg>
         <constructor-arg name="role" value="main"></constructor-arg>
     </bean>
-    <bean id="cast2" class="CodeWithNikhil.LearnSpring.xmlBasedIoc.cast">
+    <bean id="cast2" class="CodeWithNikhil.LearnSpring.XmlBasedIoc.cast">
         <constructor-arg name="id" value="2"></constructor-arg>
         <constructor-arg name="name" value="wesley"></constructor-arg>
         <constructor-arg name="role" value="friend"></constructor-arg>
     </bean>
 
-    <bean id="cast3" class="CodeWithNikhil.LearnSpring.xmlBasedIoc.cast">
+    <bean id="cast3" class="CodeWithNikhil.LearnSpring.XmlBasedIoc.cast">
         <constructor-arg name="id" value="3"></constructor-arg>
         <constructor-arg name="name" value="granger"></constructor-arg>
         <constructor-arg name="role" value="gf"></constructor-arg>
@@ -54,27 +54,15 @@
     <!--salary bean-->
 
 
-    <bean id="salary1" class="CodeWithNikhil.LearnSpring.xmlBasedIoc.salary">
+    <bean id="salary1" class="CodeWithNikhil.LearnSpring.XmlBasedIoc.salary">
         <constructor-arg name="salary" value="70000"></constructor-arg>
     </bean>
-    <bean id="salary2" class="CodeWithNikhil.LearnSpring.xmlBasedIoc.salary">
+    <bean id="salary2" class="CodeWithNikhil.LearnSpring.XmlBasedIoc.salary">
         <constructor-arg name="salary" value="40000"></constructor-arg>
     </bean>
-    <bean id="salary3" class="CodeWithNikhil.LearnSpring.xmlBasedIoc.salary">
+    <bean id="salary3" class="CodeWithNikhil.LearnSpring.XmlBasedIoc.salary">
         <constructor-arg name="salary" value="10000"></constructor-arg>
     </bean>
-
-
-
-
-    <bean id="cast3" class="CodeWithNikhil.LearnSpring.xmlBasedIoc.cast">
-        <constructor-arg name="id" value="3"></constructor-arg>
-        <constructor-arg name="name" value="granger"></constructor-arg>
-        <constructor-arg name="role" value="gf"></constructor-arg>
-    </bean>
-
-
-
 
 
 </beans>
