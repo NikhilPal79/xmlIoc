@@ -7,12 +7,16 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
+import javax.sql.DataSource;
 import java.util.List;
 import java.util.Map;
 
 @Configuration
 /*@ComponentScan("CodeWithNikhil.LearnSpring")*/
 public class AppConfig {
+
+
+
 
     /*<bean id="movie" class="CodeWithNikhil.LearnSpring.XmlBasedIoc.Movie" init-method="start" destroy-method="destroy">
         <constructor-arg name="id" value="1"></constructor-arg>

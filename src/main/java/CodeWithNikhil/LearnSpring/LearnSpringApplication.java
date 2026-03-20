@@ -2,6 +2,7 @@ package CodeWithNikhil.LearnSpring;
 
 import CodeWithNikhil.LearnSpring.Component.MovieBO;
 import CodeWithNikhil.LearnSpring.Configuration.AppConfig;
+import CodeWithNikhil.LearnSpring.JDBC.Service.empService;
 import CodeWithNikhil.LearnSpring.XmlBasedIoc.Movie;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,7 +13,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class LearnSpringApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(LearnSpringApplication.class, args);
+
 
 
 		/*Honda honda = new Honda();
@@ -56,12 +57,12 @@ public class LearnSpringApplication {
 
 
 		((ClassPathXmlApplicationContext)context).close();*/
-
+/*
 		ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 		Movie contextBean = context.getBean("movie", Movie.class);
 		System.out.println(contextBean);
 
-		/*((AnnotationConfigApplicationContext)context).close();*/
+		*//*((AnnotationConfigApplicationContext)context).close();*//*
 
 
 		MovieBO movieBO1 = context.getBean(MovieBO.class);
@@ -71,7 +72,14 @@ public class LearnSpringApplication {
 		System.out.println(movieBO1);
 		System.out.println(movieBO2);
 		System.out.println(movieBO3);
-		System.out.println(movieBO4);
+		System.out.println(movieBO4);*/
+
+		///
+		ConfigurableApplicationContext empApplicationContext = SpringApplication.run(LearnSpringApplication.class, args);
+		empService empApplicationContextBean = empApplicationContext.getBean(empService.class);
+
+		empApplicationContextBean.displayAllEmp();
+		empApplicationContextBean.displayOnlyTwoEmp();
 
 
 	}

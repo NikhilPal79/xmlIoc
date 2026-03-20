@@ -25,7 +25,15 @@ public class Movie {
         System.out.println(" destroy method ");
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "id=" + id +
+                ", movieName='" + movieName + '\'' +
+                ", releaseYear=" + releaseYear +
+                ", genre='" + genre + '\'' +
+                ", cast=" + cast +
+                ", castSalary=" + castSalary +
+                '}';
+    }
 }

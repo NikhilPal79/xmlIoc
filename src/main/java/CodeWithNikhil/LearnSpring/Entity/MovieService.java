@@ -1,4 +1,4 @@
-package CodeWithNikhil.LearnSpring;
+package CodeWithNikhil.LearnSpring.Entity;
 
 import CodeWithNikhil.LearnSpring.Component.MovieDAO;
 import org.springframework.stereotype.Component;
